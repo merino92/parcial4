@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="5dp" android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center"
+                android:padding="5dp" android:layout_marginTop="35dp">
+            <android.support.v7.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="5dp" app:contentPadding="5dp" android:id="@+id/cardconsulta"
+                    app:cardElevation="5dp">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" android:gravity="center">
+                            <TextView
+                                    android:text="CONSULTA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" android:id="@+id/txtrecete"
+                                    android:textSize="18sp" android:textStyle="bold"
+                                    android:textColor="@android:color/black"/>
+                            <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" android:gravity="center">
+                                <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp" app:srcCompat="@drawable/consulta2"
+                                        android:id="@+id/img1"/>
+                                <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.5dp"
+                                        android:background="@color/cardview_dark_background"
+                                        android:layout_marginTop="5dp"
+                                >
+
+                                </LinearLayout>
+                                <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp">
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:gravity="center"
+                    android:padding="5dp" android:layout_marginTop="35dp">
+                <android.support.v7.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent" app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="5dp" android:layout_marginRight="20dp" app:contentPadding="5dp"
+                        android:id="@+id/productoscard" app:cardElevation="5dp">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" android:gravity="center">
+                                <TextView
+                                        android:text="PRODUCTOS"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" android:id="@+id/txtproducto"
+                                        android:textSize="18sp" android:textStyle="bold"
+                                        android:textColor="@android:color/black"/>
+                                <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" android:gravity="center">
+                                    <ImageView
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp" app:srcCompat="@drawable/hierbas2"
+                                            android:id="@+id/imageView3"/>
+                                    <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1.5dp"
+                                            android:background="@color/cardview_dark_background"
+                                            android:layout_marginTop="5dp"
+                                    >
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp">
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="5dp" app:contentPadding="5dp" app:cardElevation="5dp">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" android:gravity="center">
+                                <TextView
+                                        android:text="RECETA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" android:id="@+id/textView2"
+                                        android:textSize="18sp" android:textStyle="bold"
+                                        android:textColor="@android:color/black"/>
+                                <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" android:gravity="center">
+                                    <ImageView
+                                            android:layout_width="100dp"
+                                            android:layout_height="100dp"
+                                            app:srcCompat="@drawable/receta"
+                                            android:id="@+id/imageView2"/>
+                                    <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1.5dp"
+                                            android:background="@color/cardview_dark_background"
+                                            android:layout_marginTop="5dp"
+                                    >
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                            android:orientation="vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp">
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
