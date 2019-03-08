@@ -8,6 +8,7 @@ import android.support.v7.widget.CardView
 class MainActivity : AppCompatActivity() {
 
     private var carta_consulta:CardView?=null
+    private var carta_productos:CardView?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         carta_consulta=findViewById(R.id.cardconsulta)
         MostrarConsulta(carta_consulta!!)
+        carta_productos=findViewById(R.id.productoscard)
+        MostrarProductos(carta_productos!!)
 
     }
 
@@ -32,5 +35,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intento)
 
         }
+    }
+
+
+    fun MostrarProductos(carta:CardView){
+
+        carta.setOnClickListener {
+
+            val intento=Intent(this,productos::class.java)
+            startActivity(intento)
+        }
+
     }
 }
