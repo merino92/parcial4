@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
 
     private var carta_consulta:CardView?=null
     private var carta_productos:CardView?=null
+    private var carta_receta:CardView?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         MostrarConsulta(carta_consulta!!)
         carta_productos=findViewById(R.id.productoscard)
         MostrarProductos(carta_productos!!)
+        carta_receta=findViewById(R.id.creceta)
+        MostrarReceta(carta_receta!!)
 
     }
 
@@ -46,5 +49,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intento)
         }
 
+    }
+
+    fun MostrarReceta(carta:CardView){
+        carta.setOnClickListener {
+
+            val intento=Intent(this,receta::class.java)
+            startActivity(intento)
+        }
     }
 }
