@@ -16,14 +16,15 @@ import android.widget.TextView
 
 class productos : AppCompatActivity() {
 
-    private val total:TextView?=null
-    private val reciclador:RecyclerView?=null
+    private var total:TextView?=null
+    private var reciclador:RecyclerView?=null
     private var listado:ArrayList<Modelo>?=null
-
+private var listadoprecios:ArrayList<listadoProducto>?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_productos)
-
+        total=findViewById(R.id.txtotal)
+        listadoprecios=ArrayList<listadoProducto>()
 
         //ListarProducto(this)
     }
@@ -56,7 +57,7 @@ class productos : AppCompatActivity() {
         val adaptador=Adaptador(lista,this){p->
 
             val data= listado!![p]
-            Cantidad(0)
+            Cantidad(0,dialogo,data)
 
 
         }
@@ -109,7 +110,8 @@ class productos : AppCompatActivity() {
 
 
         var canti=0
-    fun Cantidad(p:Int) {
+
+    fun Cantidad(p:Int,alerta:AlertDialog,data:Modelo) {
 
         val dialogView = LayoutInflater.from(this).inflate(R.layout.cantidad, null)
         //se inicia el cuadro del dialogo
@@ -126,14 +128,28 @@ class productos : AppCompatActivity() {
        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener({
 
            var c=cantidad.text.toString().toInt()
-
+            var cantidad_producto=0
            if(c>0){
-               canti=c
+               cantidad_producto=c
            }else{
-               canti=1
+               cantidad_producto=1
            }
 
+           var subtotal=cantidad_producto* data!!.Precio!!
+           var t1=total!!.text.toString().toDouble()+subtotal
+
+           var linea=listadoProducto(
+               cantidad_producto,
+               data.nombre!!,
+               data!!.Precio!!,
+               subtotal
+           )
+
+           listadoprecios!!.add(linea)
+
+            total!!.text=t1.toString()
            dialog.dismiss()
+           alerta.dismiss()
        } )
 
         dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setOnClickListener({
@@ -143,6 +159,8 @@ class productos : AppCompatActivity() {
 
         } )
     }
+
+
 
 
 
