@@ -56,7 +56,7 @@ class productos : AppCompatActivity() {
         val adaptador=Adaptador(lista,this){p->
 
             val data= listado!![p]
-            Cantidad()
+            Cantidad(0)
 
 
         }
@@ -109,7 +109,7 @@ class productos : AppCompatActivity() {
 
 
         var canti=0
-    fun Cantidad(p:Int): Int {
+    fun Cantidad(p:Int) {
 
         val dialogView = LayoutInflater.from(this).inflate(R.layout.cantidad, null)
         //se inicia el cuadro del dialogo
@@ -128,9 +128,9 @@ class productos : AppCompatActivity() {
            var c=cantidad.text.toString().toInt()
 
            if(c>0){
-               return canti
+               canti=c
            }else{
-              return  canti=1
+               canti=1
            }
 
            dialog.dismiss()
